@@ -21,15 +21,19 @@ function onFormInput(event) {
 }
 
 function onFormSubmit(event) {
-  event.preventDefault();
+  if (refs.email.value === '' || refs.message.value === '') {
+    alert('Please fill in all the fields!');
+  } else {
+    event.preventDefault();
 
-  const currentDataObject = {
-    email: refs.email.value,
-    message: refs.message.value,
-  };
-  console.log(currentDataObject);
-  event.currentTarget.reset();
-  localStorage.removeItem(STORAGE_KEY);
+    const currentDataObject = {
+      email: refs.email.value,
+      message: refs.message.value,
+    };
+    console.log(currentDataObject);
+    event.currentTarget.reset();
+    localStorage.removeItem(STORAGE_KEY);
+  }
 }
 
 function fillForm() {

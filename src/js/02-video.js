@@ -8,7 +8,6 @@ const player = new Player(iframe);
 const currentStorageData = localStorage.getItem(STORAGE_KEY);
 
 setTimeAfterPageRefresh();
-
 player.on('timeupdate', throttle(onPlay, 1000));
 
 function onPlay(currentTime) {

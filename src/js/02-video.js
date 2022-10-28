@@ -18,6 +18,5 @@ function onPlay(currentTime) {
 function setTimeAfterPageRefresh() {
   if (currentStorageData) {
     player.setCurrentTime(currentStorageData);
-    console.log(iframe);
   }
 }
